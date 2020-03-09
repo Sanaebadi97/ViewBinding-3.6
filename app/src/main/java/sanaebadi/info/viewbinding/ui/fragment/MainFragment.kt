@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import sanaebadi.info.viewbinding.R
 import sanaebadi.info.viewbinding.databinding.ActivityMainBinding
 import sanaebadi.info.viewbinding.databinding.FragmentMainBinding
 
@@ -24,14 +26,20 @@ class MainFragment : Fragment() {
     ): View? {
         // Inflate the layout for this sanaebadi.info.viewbinding.ui.activity.fragment
         binding=FragmentMainBinding.inflate(inflater,container,false)
-        val view=binding.root
+
+        return binding.root
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        navController = Navigation.findNavController(view)
 
         binding.btnMore.setOnClickListener{
-
+            navController!!.navigate(R.id.action_mainFragment_to_secondFragment)
 
         }
-
-        return view
     }
 
     override fun onDestroy() {
