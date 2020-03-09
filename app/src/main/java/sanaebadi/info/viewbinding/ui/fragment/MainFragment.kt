@@ -1,5 +1,6 @@
 package sanaebadi.info.viewbinding.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -22,6 +23,11 @@ class MainFragment : Fragment() {
         // Inflate the layout for this sanaebadi.info.viewbinding.ui.activity.fragment
         binding=FragmentMainBinding.inflate(inflater,container,false)
         val view=binding.root
+
+        binding.btnMore.setOnClickListener{
+
+
+        }
 
         return view
     }

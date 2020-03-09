@@ -5,10 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.SecondFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <WebView
+        android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:ignore="MissingConstraints"/>
+
 
 </FrameLayout>
