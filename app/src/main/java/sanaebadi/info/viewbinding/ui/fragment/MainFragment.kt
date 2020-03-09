@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
 import sanaebadi.info.viewbinding.databinding.ActivityMainBinding
 import sanaebadi.info.viewbinding.databinding.FragmentMainBinding
 
@@ -15,6 +16,7 @@ import sanaebadi.info.viewbinding.databinding.FragmentMainBinding
 class MainFragment : Fragment() {
 
     private lateinit var binding: FragmentMainBinding
+    private var navController: NavController? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
